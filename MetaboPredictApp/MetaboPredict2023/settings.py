@@ -33,7 +33,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # DEBUG = True
 # ALLOWED_HOSTS = ["metabopredict.onrender.com"]
 
-ALLOWED_HOSTS = os.environ.get('SECRET_KEY', ["metabopredict.onrender.com"])
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS', "metabopredict.onrender.com")]
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'local-dev-only-key')
 # DEBUG = os.environ.get('DEBUG', 'True') == 'True'
