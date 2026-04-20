@@ -31,7 +31,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = 'django-insecure-n+gz0f!-r!vsnc!cgtp7)pc%#y-vnx2(k3hknomqbr)zm1!l0w'
 # # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-ALLOWED_HOSTS = ["metabopredict.onrender.com"]
+# ALLOWED_HOSTS = ["metabopredict.onrender.com"]
+
+ALLOWED_HOSTS = os.environ.get('SECRET_KEY', ["metabopredict.onrender.com"])
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'local-dev-only-key')
 # DEBUG = os.environ.get('DEBUG', 'True') == 'True'
